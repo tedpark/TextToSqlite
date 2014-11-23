@@ -12,7 +12,7 @@ end
 
 
 db  = SQLite3::Database.new('books.sqlite') //sample
-ins = db.prepare('insert into text (article) values (?)')
+ins = db.prepare('insert into text (article) values (?)') //text = table, article = entity
 string.each { 
 	|s| ins.execute(s) 
 }
